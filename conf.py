@@ -44,8 +44,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'2014-labibi'
-copyright = u'2014, C. Titus Brown'
+project = u'2016-easir'
+copyright = u'2016, C. Titus Brown, Maryann Martone, and Maryann Martone'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -176,7 +176,7 @@ htmlhelp_basename = 'labibidoc'
 
 html_context = {
 #   "google_analytics_id" : 'UA-36028965-1',
-#   "disqus_shortname" : 'labibi',
+   "disqus_shortname" : '2016-aesir',
 #   "github_base_account" : 'ctb',
 #   "github_project" : 'labibi',
 }
