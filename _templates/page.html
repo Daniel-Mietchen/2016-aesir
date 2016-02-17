@@ -16,14 +16,6 @@
 
 {%- set render_sidebar = 0 %}
 
-{% block extrahead %}
-{{ super() }}
-
-<script async defer src="//hypothes.is/embed.js"></script>
-<script>window.hypothesisConfig=function(){return{showHighlights:true};</script>
-
-{% endblock %}
-
 {##################################################}
 {# for plone-derived "edit me" & Google analytics #}
 {##################################################}
@@ -114,6 +106,9 @@
 {% endmacro %}
 
 {% block extrahead %}
+
+<script async defer src="//hypothes.is/embed.js"></script>
+<script>window.hypothesisConfig=function(){return{showHighlights:true};</script>
 
 {% if github_base_account %}
 <script src="{{ pathto('_static/labibi.js', 1) }}"></script>
