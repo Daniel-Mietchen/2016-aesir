@@ -36,7 +36,7 @@ relevant literature.
 Three use cases this would enable
 ---------------------------------
 
-3. Aneas is reading a paper from 2004 on a closed-access site, and is
+1. Aneas is reading a paper from 2004 on a closed-access site, and is
    interested in knowing who has cited the paper, linking to back
    references and identifying which have been retracted, and seeing what
    databases have used the information from the paper.  Because the
