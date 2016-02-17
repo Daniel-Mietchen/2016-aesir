@@ -16,6 +16,14 @@
 
 {%- set render_sidebar = 0 %}
 
+{% block header %}
+{{ super() }}
+
+<script async defer src="//hypothes.is/embed.js"></script>
+<script>window.hypothesisConfig=function(){return{showHighlights:true};</script>
+
+{% endblock %}
+
 {##################################################}
 {# for plone-derived "edit me" & Google analytics #}
 {##################################################}
