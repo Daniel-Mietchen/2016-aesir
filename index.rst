@@ -18,6 +18,8 @@ The main text is here:
 
 :doc:`primary`
 
+Also see: `ContentMine and Hypothes.is teaming up for proposal <http://contentmine.org/2016/02/open-science-prize-contentmine-and-hypothes-is-teaming-up-for-proposal/>`__
+
 Indices and tables
 ==================
 

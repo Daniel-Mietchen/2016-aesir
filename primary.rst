@@ -33,6 +33,32 @@ for their own document collections; or, reviewers could privately
 annotate papers they are reviewing with an automated system to identify
 relevant literature.
 
+Three use cases this would enable
+---------------------------------
+
+3. Aneas is reading a paper from 2004 on a closed-access site, and is
+   interested in knowing who has cited the paper, linking to back
+   references and identifying which have been retracted, and seeing what
+   databases have used the information from the paper.  Because the
+   paper is not accessible to any automated annotation services, none of
+   this information is available.
+   
+2. Tina has access to an otherwise inaccessible paper, and wants to
+   apply `ContentMine <http://contentmine.org/>`__ to it.  She cannot
+   give ContentMine direct access to it. Aesir would allow Tina to
+   send the paper to a ContentMine server to be annotated, at which
+   point Tina could see the annotations directly.
+
+3. James is reviewing a paper, and wants to mark it up with blog
+   commentary and public reviews.  Unfortunately, the paper is a
+   revision of a posted preprint and so its hypothesis ID has changed;
+   James submits the paper to a service that identifies it as a
+   duplicate of a previously annotated paper and transfers the
+   annotations over to it.
+
+Deliverables
+------------
+
 The first line of deliverables would be a full server (implemented in
 Python) for adding annotations to documents, together with JavaScript
 bookmarklets to enable submission of documents to such servers from
