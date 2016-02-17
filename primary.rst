@@ -36,25 +36,26 @@ relevant literature.
 Three use cases this would enable
 ---------------------------------
 
-1. Aneas is reading a paper from 2004 on a closed-access site, and is
+1. Aeneas is reading a paper from 2004 on a closed-access site, and is
    interested in knowing who has cited the paper, linking to back
    references and identifying which have been retracted, and seeing what
    databases have used the information from the paper.  Because the
    paper is not accessible to any automated annotation services, none of
-   this information is available.
+   this information can be posted on the paper. Aeneas submits the paper
+   to the Aesir annotation server with a click, which annotates it and
+   "paints" the paper with annotations.
    
 2. Tina has access to an otherwise inaccessible paper, and wants to
    apply `ContentMine <http://contentmine.org/>`__ to it.  She cannot
-   give ContentMine direct access to it. Aesir would allow Tina to
-   send the paper to a ContentMine server to be annotated, at which
-   point Tina could see the annotations directly.
+   give ContentMine direct access to it. Tina submits the paper
+   to an Aesir server running ContentMine, which annotates the paper.
 
 3. James is reviewing a paper, and wants to mark it up with blog
    commentary and public reviews.  Unfortunately, the paper is a
-   revision of a posted preprint and so its hypothesis ID has changed;
-   James submits the paper to a service that identifies it as a
-   duplicate of a previously annotated paper and transfers the
-   annotations over to it.
+   revision of a posted preprint and so its hypothesis ID has changed
+   and no annotations are associated with it; James submits the paper
+   to a service that identifies it as a duplicate of a previously
+   annotated paper and transfers the annotations over to it where possible.
 
 Deliverables
 ------------
