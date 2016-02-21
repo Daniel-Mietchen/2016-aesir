@@ -20,6 +20,15 @@ The main text is here:
 
 Also see: `ContentMine and Hypothes.is teaming up for proposal <http://contentmine.org/2016/02/open-science-prize-contentmine-and-hypothes-is-teaming-up-for-proposal/>`__
 
+Other `#openscienceprize <https://twitter.com/search?f=tweets&vertical=default&q=%23openscienceprize&src=typd>`__ proposals:
+
+* `BLAZE, a unified interface for open discovery <https://github.com/pkraker/open-discovery/>`__
+* `Making reusability a first-class citizen in the academic workflow <https://github.com/betatim/openscienceprize/>`__
+
+You might also be interested in `Daniel Mietchen's collaboration.tsv
+<https://github.com/Daniel-Mietchen/open-science-prize/blob/master/collaboration.tsv>`__
+for people looking for collaborators.
+
 Indices and tables
 ==================
 
