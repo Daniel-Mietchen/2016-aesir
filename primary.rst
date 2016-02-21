@@ -1,7 +1,15 @@
 Annotation as a service: helping build a global knowledge layer with annotation of the dark literature.
 =======================================================================================================
 
-Codename: Aesir.
+**Codename: Aesir.**
+
+(This is a proposed entry for the `Open Science Prize
+<https://www.openscienceprize.org/>`__. The content on this site
+emerged from discussions between Jon Udell, Maryann Martone, and Titus
+Brown.  We welcome any and all comments or suggestions, via disqus
+comments (at bottom), `Hypothesis annotations <http://hypothes.is>`__,
+or via pull request `(github here)
+<https://github.com/ctb/2016-aesir/>`__.)
 
 Abstract:
 ---------
