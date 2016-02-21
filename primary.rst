@@ -84,7 +84,7 @@ Three use cases that Aesir would enable
    ContentMine direct access to it. Tina submits the paper to an Aesir
    server running ContentMine, which analyzes and annotates the paper.
 
-3. **Making use of & driving open peer review.** James is reviewing a
+3. **Leveraging & driving open peer review.** James is reviewing a
    paper, and wants to mark it up with external blog commentary and
    public reviews.  Unfortunately, the paper is a revision of a posted
    preprint and so its hypothesis URL has changed and no annotations
@@ -132,7 +132,7 @@ public open source code base (here, working with ContentMine would be
 a natural fit). We would also provide simple hooks to enable anyone
 to integrate whatever annotation engine they wanted.
 
-A prototype implementation is avaiable here. @@
+A prototype implementation will be available shortly.
 
 On top of these deliverables we envision a variety of services, depending
 on where we opportunities develop:
@@ -167,17 +167,16 @@ on where we opportunities develop:
 Impacts and ecosystem
 ---------------------
 
-First and foremost, we envision this as providing entree to the "dark
-literature" via annotations.  Annotations are exempt from publisher's
-usage restrictions, which means that anyone with access to a document
-can submit it to an annotation server, layer annotations upon the
-document, and publicize these annotations. (@CTB maybe move this second.)
-
-Second, we believe we can enable an ecosystem of annotation
+First and foremost, we believe we can enable an ecosystem of annotation
 algorithms, some general (e.g. linguistic analysis of document
 structure) and some field-specific (e.g. automated extraction and
 annotation of drug-drug interactions across document collections).
-(@CTB maybe move this first.)
+
+Second, we envision this as providing entree to the "dark
+literature" via annotations.  Annotations are exempt from publisher's
+usage restrictions, which means that anyone with access to a document
+can submit it to an annotation server, layer annotations upon the
+document, and publicize these annotations.
 
 Third, by integrating human feedback and meta-annotation of these
 primary annotations, we can help provide algorithm authors with
@@ -189,7 +188,10 @@ bodies of papers, we will enable meta-analysis of annotation networks
 and be able to build connections between overlapping but disparate
 subfields of scientific literature.
 
-Specific use cases; expand on some:
+A list of use cases
+-------------------
+
+(Expand on these.)
 
 Wormbase & Textpresso integration - Wormbase has integrated a large
 body of literature into its database, and we could help reverse the
@@ -201,10 +203,6 @@ straightforward to identify cases where highly similar annotations
 were placed on different document IDs, which could then be examined
 for document equivalence, different versions, or plagiarized text.
 
-Annotation and mark up of scientific teaching materials. Not sure what
-I was thinking here, but probably something to do with Software and Data
-Carpentry, and literature.
-
 Distributed commenting and aggregation of pre/post-publication peer
 review of literature.  Basically, a way to take comments from multiple
 locations and link them directly to the relevant text, pubmed records,
@@ -214,14 +212,15 @@ Back citation from future literature, including identification of
 retracted citations, comments, and blog posts on the work and derived
 works.
 
-Forward links to software, computational workflows, replications of published
-work.
+Place forward links to software, computational workflows, & replications of
+published work on papers automatically.
 
 What would we spend the money on?
 ---------------------------------
 
 * hackathons & barnraisings
 * developer
+* ??
 
 Architecture
 ------------
@@ -240,7 +239,6 @@ multiple servers each running one or a few engines.
 
 Leftover text
 -------------
-
 
 We believe that this functionality can be usefully augmented by
 building server-side functionality that will enable anyone with access
