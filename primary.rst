@@ -18,15 +18,14 @@ We propose to build server-side functionality to enable anyone to
 consume text and add annotations to it, using the `hypothes.is
 annotation system <http://hypothes.is>`__.  This would complement the
 client-side manual annotation functionality already offered by
-hypothes.is, and enable server-based analysis of private document
-collections.  The primary value proposition is to enable deeper
-annotation and meta-analysis of a vast range of scientific literature,
-including closed-access papers, pre-publication and in-review papers,
-"informal" literature such as blog posts and tutorials, software
-manuals and documentation, and micro- and meso-scale data resources.
-In effect, these annotations would constitute an open metadata layer
-across all of science, and usher in a golden age of scientific
-communication.
+hypothes.is, and enable server-based analysis of closed documents by
+anyone with access to them.  The initial value of this is to expand
+the reach of the global annotation web into the "dark literature",
+while also enabling deeper annotation and meta-analysis of that
+literature.  Here, the "dark literature" includes closed-access
+papers, pre-publication and in-review papers, "informal" literature
+such as blog posts and tutorials, software manuals and documentation,
+and micro- and meso-scale data resources.
 
 Introduction:
 -------------
@@ -51,6 +50,8 @@ the friction associated with working with publishers to provide an
 annotation overlay, although a large consortium of publishers *is*
 working closely with hypothes.is.
 
+For more on hypothes.is, please see :doc:`introducing-hypothesis`.
+
 Statement of problem:
 ---------------------
 
@@ -72,26 +73,29 @@ This will permit individuals to link closed papers of interest into
 the global annotatome, while also enabling new annotation *services*
 to be built quickly and easily.
 
+We have chosen the nickname "Aesir" for this system.
+
 Three use cases that Aesir would enable
 ---------------------------------------
 
-1. **Annotating closed literature.** Aeneas is reading a paper from
-   2004 on a closed-access site, and is interested in knowing who has
-   cited the paper, linking to back references and identifying which
-   have been retracted, and seeing what databases have used the
-   information from the paper.  Because the paper is not accessible to
-   any automated annotation services, none of this information can be
-   posted on the paper. Aeneas submits the paper to the Aesir
-   annotation server with a click, which annotates it and "paints" the
-   paper with annotations.
-   
-2. **Automating deep annotation of closed literature.** Tina has
-   access to an otherwise inaccessible paper, and wants to apply
-   `ContentMine <http://contentmine.org/>`__ to it.  She cannot give
-   ContentMine direct access to it. Tina submits the paper to an Aesir
-   server running ContentMine, which analyzes and annotates the paper.
+1. **Annotating closed biomedical literature with links to genome
+   databases.** Rebecca is reading a C. elegans paper in a
+   closed-access journal, and would like to decorate it with
+   annotations connecting genes and genome coordinates to Wormbase,
+   the C. elegans genome database.  She installs the Wormbase
+   "annotate this" bookmark and clicks on it; this sends the paper
+   to an Aesir server that annotates it and posts the annotations to
+   hypothes.is, where they can be viewed by Rebecca and others.
 
-3. **Leveraging & driving open peer review.** James is reviewing a
+2. **Extract data from closed literature.** Jason would like to use
+   ContentMine to extract data from a closed-access paper he is
+   reading, for his own reuse.  He clicks the ContentMine "extract
+   this" bookmark, which sends the paper to an Aesir server which runs
+   the ContentMine annotation engine on it and redirects Jason to the
+   resulting data.  In line with ContentMine's collaboration with
+   hypothes.is, links to the data are also provided directly on the paper.
+
+3. **Leveraging & driving open peer review.** Tina is reviewing a
    paper, and wants to mark it up with external blog commentary and
    public reviews.  Unfortunately, the paper is a revision of a posted
    preprint and so its hypothes.is URL has changed and no annotations
@@ -99,6 +103,11 @@ Three use cases that Aesir would enable
    identifies it as a duplicate of a previously annotated paper and
    transfers the annotations over to it where possible.  As a bonus,
    James could annotate the paper with his review when he is done.
+
+In these three use cases, considerable computational work is being done
+by the remote server - none of this work can be done within the confines
+of the current client-side hypothes.is approach, and all three use cases
+could be supported with a single technical solution.
 
 Why does this fit the Open Science Prize?
 -----------------------------------------
@@ -111,20 +120,24 @@ integrate, analyze, and compare *existing* annotations, enabling
 are explicitly licensed under CC0, there is no restriction on reuse
 or remixing.
 
-Moreover, by hacking the precedent of fair use in using cloud services
-to store and search personal document collections (c.f. Evernote and
-Papers), we believe we can open up old and closed literature.  The
-initial beneficiaries of this will be the closed-access publishers who
-may find more users of their closed archives, but even this serves the
-greater good by linking this closed literature into the global
-annotatome.  In the long term, we believe this will serve as a
-powerful demonstration of the uses and power of open literature.
+Moreover, the use of closed access literature to produce annotations
+is allowed by publishers (link?)  By making use of remote "cloud"
+services to analyze (but not retain) literature per a user's request,
+we believe we avoiding any infringement of license terms.  We do
+expect that the initial beneficiaries of this will be the
+closed-access publishers who may find more users of their closed
+archives, but even this serves the greater good by linking this closed
+literature into the global annotatome.  In the long term, we believe
+this will serve as a powerful demonstration of the uses and power of
+open literature.
 
 Longer term, we believe there will be many groups interested in
 permissionless server-side automated annotation of text, and we hope
 that by providing an automated system matching the existing client
 annotation interface, we can more readily enable the development of an
-ecosystem of approaches to open annotation.
+ecosystem of approaches to open annotation.  Essentially, we hope to
+expand the range of creative people who can try out new annotation
+approaches.
 
 Deliverables
 ------------
