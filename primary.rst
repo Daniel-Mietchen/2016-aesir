@@ -51,29 +51,22 @@ the friction associated with working with publishers to provide an
 annotation overlay, although a large consortium of publishers *is*
 working closely with hypothes.is.
 
-The functionality currently offered by hypothes.is is largely *client
-side*, in that most annotations are entered manually.  In many cases,
-more automated or deeper computational analysis (e.g. of linguistic
-structure, or correlations with existing literature) would be
-valuable, and this would require a programmatic interface to entering
-annotations.  There is no fundamental technical barrier to
-programmatically entering annotations at large scale, and the
-ContentMine/Hypothes.is contest entry seeks to implement exactly that,
-using ContentMine to extract facts and metadata from the open
-literature and then annotate the document with Hypothes.is.
-However, there is currently no way to enable automated analysis of
-closed or not-yet-public literature.
+Statement of problem:
+---------------------
 
-We therefore propose to build server-side software that would enable
-individuals, institutions, and others to provide analysis and
-annotation services as a Web service.  The primary client-side
-mechanism would be a bookmarklet or in-browser app that would submit
-HTML or PDF text to a server for analysis.  On the server side, we
-would provide Python libraries for text consumption and normalization,
-anchor extraction, annotation retrieval, and annotation submission.
-Our ultimate goal is to open up an ecosystem of annotation production,
-consumption, and meta-analysis to everyone, and to allow anyone with
-access to any document to enter it into this ecosystem.
+There are two problems we are interested in solving.
+
+First, large portions of the biomedical scholarly literature are
+completely inaccessible to automated, large scale analysis.
+
+Second, the hypothes.is annotation system currently relies on manual
+annotation.
+
+We believe we can help solve these two bigger problems with one
+technical approach: we will give individuals an in-browser app letting
+them submit any paper to an analysis server that will then provide
+open annotations on the paper.  We will also build server-side
+software to support any annotation engine.
 
 Three use cases that Aesir would enable
 ---------------------------------------
@@ -267,4 +260,28 @@ publishers and institutions could provide a "first look" of annotation
 for their own document collections; or, reviewers could privately
 annotate papers they are reviewing with an automated system to identify
 relevant literature.
+
+The functionality currently offered by hypothes.is is largely *client
+side*, in that most annotations are entered manually.  In many cases,
+more automated or deeper computational analysis (e.g. of linguistic
+structure, or correlations with existing literature) would be
+valuable, and this would require a programmatic interface to entering
+annotations.  There is no fundamental technical barrier to
+programmatically entering annotations at large scale, and the
+ContentMine/Hypothes.is contest entry seeks to implement exactly that,
+using ContentMine to extract facts and metadata from the open
+literature and then annotate the document with Hypothes.is.
+However, there is currently no way to enable automated analysis of
+closed or not-yet-public literature.
+
+More generally, we propose to build server-side software that would
+enable individuals, institutions, and others to provide analysis and
+annotation services as a Web service.  The primary client-side
+mechanism would be a bookmarklet or in-browser app that would submit
+HTML or PDF text to a server for analysis.  On the server side, we
+would provide Python libraries for text consumption and normalization,
+anchor extraction, annotation retrieval, and annotation submission.
+Our ultimate goal is to open up an ecosystem of annotation production,
+consumption, and meta-analysis to everyone, and to allow anyone with
+access to any document to enter it into this ecosystem.
 
