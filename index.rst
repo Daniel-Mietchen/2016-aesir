@@ -14,6 +14,10 @@ suggestions, via disqus comments (at bottom), `Hypothesis annotations
 <http://hypothes.is>`__, or via pull request `(github here)
 <https://github.com/ctb/2016-aesir/>`__.
 
+Background is here:
+
+:doc:`introducing-hypothesis`
+
 The main text is here:
 
 :doc:`primary`
