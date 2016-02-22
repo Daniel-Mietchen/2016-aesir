@@ -66,7 +66,11 @@ We believe we can help solve these two bigger problems with one
 technical approach: we will give individuals an in-browser app letting
 them submit any paper to an analysis server that will then provide
 open annotations on the paper.  We will also build server-side
-software to support any annotation engine.
+software to support *any* annotation engine.
+
+This will permit individuals to link closed papers of interest into
+the global annotatome, while also enabling new annotation *services*
+to be built quickly and easily.
 
 Three use cases that Aesir would enable
 ---------------------------------------
