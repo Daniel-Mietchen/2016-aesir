@@ -28,6 +28,7 @@ Other `#openscienceprize <https://twitter.com/search?f=tweets&vertical=default&q
 
 * `BLAZE, a unified interface for open discovery <https://github.com/pkraker/open-discovery/>`__
 * `Making reusability a first-class citizen in the academic workflow <https://github.com/betatim/openscienceprize/>`__
+* `Thinklab: A platform for open review of research grant proposals <http://thinklab.com/p/thinklabOSP>`__
 
 You might also be interested in `Daniel Mietchen's collaboration.tsv
 <https://github.com/Daniel-Mietchen/open-science-prize/blob/master/collaboration.tsv>`__
