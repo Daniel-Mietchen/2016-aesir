@@ -1,5 +1,5 @@
-Annotation as a service: helping build a global knowledge layer with annotation of the dark literature.
-=======================================================================================================
+Proposal: Annotation as a service: helping build a global knowledge layer with annotation of the dark literature.
+=================================================================================================================
 
 **Codename: Aesir.**
 
@@ -157,7 +157,7 @@ to integrate whatever annotation engine they wanted.
 A prototype implementation will be available shortly.
 
 On top of these deliverables we envision a variety of services, depending
-on where we opportunities develop:
+on where we see opportunities:
 
 * large-scale annotation search and comparison, so that documents can
   be grouped and analyzed based on their annotations and larger

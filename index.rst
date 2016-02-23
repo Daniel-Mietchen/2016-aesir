@@ -14,18 +14,18 @@ suggestions, via disqus comments (at bottom), `Hypothesis annotations
 <http://hypothes.is>`__, or via pull request `(github here)
 <https://github.com/ctb/2016-aesir/>`__.
 
-Background is here:
+Background:
 
 :doc:`introducing-hypothesis`
 
 The main text is here:
 
 :doc:`primary`
-
-Also see: `ContentMine and Hypothes.is teaming up for proposal <http://contentmine.org/2016/02/open-science-prize-contentmine-and-hypothes-is-teaming-up-for-proposal/>`__
+~~~~~~~~~~~~~~
 
 Other `#openscienceprize <https://twitter.com/search?f=tweets&vertical=default&q=%23openscienceprize&src=typd>`__ proposals:
 
+* `ContentMine and Hypothes.is teaming up for proposal <http://contentmine.org/2016/02/open-science-prize-contentmine-and-hypothes-is-teaming-up-for-proposal/>`__
 * `BLAZE, a unified interface for open discovery <https://github.com/pkraker/open-discovery/>`__
 * `Making reusability a first-class citizen in the academic workflow <https://github.com/betatim/openscienceprize/>`__
 * `Thinklab: A platform for open review of research grant proposals <http://thinklab.com/p/thinklabOSP>`__
