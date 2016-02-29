@@ -224,6 +224,18 @@ bodies of papers, we will enable meta-analysis of annotation networks
 and be able to build connections between overlapping but disparate
 subfields of scientific literature.
 
+Fifth, we can provide tools for databases, publishers and libraries to
+work with closely held document collections. For example, someone with
+access to large bodies of papers could annotate with the results of
+data mining applied to the paper; or, users with institutional access
+to closed-access publications could submit those publications to a
+ContentMine server for open annotation; or, biological databases could
+use their special knowledge of identifiers to provide annotations
+based on a compute-intensive analysis; or, publishers and institutions
+could provide a "first look" of annotation for their own document
+collections; or, reviewers could privately annotate papers they are
+reviewing with an automated system to identify relevant literature.
+
 Additional use cases
 --------------------
 
@@ -259,58 +271,20 @@ initial proof of concept.
 Architecture
 ------------
 
-The basic architecture is::
+The primary client-side mechanism would be a bookmarklet or in-browser
+app that would submit HTML or PDF text to a server for analysis.  On
+the server side, we would provide Python libraries for text
+consumption and normalization, anchor extraction, annotation
+retrieval, and annotation submission.  Our ultimate goal is to open up
+an ecosystem of annotation production, consumption, and meta-analysis
+to everyone, and to allow anyone with access to any document to enter
+it into this ecosystem.
 
-  content -> engine + existing annotations -> new annotations
+.. figure:: arch.png
 
-The Web server architecture would be::
-
-  content -> server running engine + retrieving existing annots -> new annots
-
-The main question up front is whether we go for a single server with multiple
-annotation engines (probably good for a prototype) or rather plan around
-multiple servers each running one or a few engines.
+   Figure 1: The basic architecture we propose; the annotation engines
+   would make use of but be largely independent of the Aesir code.
 
 Leftover text
 -------------
-
-We believe that this functionality can be usefully augmented by
-building server-side functionality that will enable anyone with access
-to a document to annotate the document using their own process and
-information. This expands the information available for annotation
-beyond what is available in the browser and the document itself.  For
-example, someone with access to large bodies of papers could annotate
-with the results of data mining applied to the paper; or, users with
-institutional access to closed-access publications could submit those
-publications to a ContentMine server for open annotation; or,
-biological databases could use their special knowledge of identifiers
-to provide annotations based on a compute-intensive analysis; or,
-publishers and institutions could provide a "first look" of annotation
-for their own document collections; or, reviewers could privately
-annotate papers they are reviewing with an automated system to identify
-relevant literature.
-
-The functionality currently offered by hypothes.is is largely *client
-side*, in that most annotations are entered manually.  In many cases,
-more automated or deeper computational analysis (e.g. of linguistic
-structure, or correlations with existing literature) would be
-valuable, and this would require a programmatic interface to entering
-annotations.  There is no fundamental technical barrier to
-programmatically entering annotations at large scale, and the
-ContentMine/Hypothes.is contest entry seeks to implement exactly that,
-using ContentMine to extract facts and metadata from the open
-literature and then annotate the document with Hypothes.is.
-However, there is currently no way to enable automated analysis of
-closed or not-yet-public literature.
-
-More generally, we propose to build server-side software that would
-enable individuals, institutions, and others to provide analysis and
-annotation services as a Web service.  The primary client-side
-mechanism would be a bookmarklet or in-browser app that would submit
-HTML or PDF text to a server for analysis.  On the server side, we
-would provide Python libraries for text consumption and normalization,
-anchor extraction, annotation retrieval, and annotation submission.
-Our ultimate goal is to open up an ecosystem of annotation production,
-consumption, and meta-analysis to everyone, and to allow anyone with
-access to any document to enter it into this ecosystem.
 
