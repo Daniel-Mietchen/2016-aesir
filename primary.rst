@@ -9,17 +9,17 @@ Introduction:
 -------------
 
 `Hypothes.is <http://hypothes.is>`__ is an annotation overlay that
-allows annotations to be associated with text. Each annotation
+allows annotations to be associated with Web text. Each annotation
 consists of a document ID, a document anchor, some free text, and
 tags; annotations can be either public or belong to private groups.
 The hypothes.is service currently offers an overlay display where
-these annotations are placed on HTML or PDF views of
-documents. Annotations can be placed manually by means of a Chrome
-plugin, or the same code delivered via JavaScript embedding or a Web
-proxy.  Annotations are stored in the hypothes.is central database and
-can be retrieved on demand for any specified URL, user, group, or
-tag. Annotations are searchable along these facets as well as with
-free text query.
+these annotations are placed on HTML or PDF views of documents;
+annotations can also be shared and searched globally. Annotations can
+be placed manually by means of a browser plugin, or the same code
+delivered via JavaScript embedding or a Web proxy.  Annotations are
+stored in the hypothes.is central database and can be retrieved on
+demand for any specified URL, user, group, or tag. Annotations are
+searchable along these facets as well as with free text query.
 
 Hypothes.is offers an optional overlay and enables permissionless
 annotation by 3rd parties unaffiliated with either the content
@@ -33,10 +33,17 @@ For more on hypothes.is, please see `Introducing Hypothes.is <https://2016-aesir
 The problems and the proposed solution
 --------------------------------------
 
+While deceptively simple in concept, the potential of Hypothes.is to
+provide a dynamic unifying layer across biomedicine is significant.
+
 There are two problems we are interested in solving.
 
 First, large portions of the biomedical scholarly literature are
-completely inaccessible to automated, large scale analysis.
+completely inaccessible to automated, large scale analysis.  Large
+portions of the biomedical literature may have been annotated, either by
+humans or automated algorithms, but these annotations are not easily
+shared, nor are they available for global analysis. Rather, each is
+locked in an individual silo.
 
 Second, the hypothes.is annotation system currently relies on manual
 annotation.
