@@ -1,31 +1,9 @@
-Proposal: Annotation as a service: helping build a global knowledge layer with annotation of the dark literature.
-=================================================================================================================
+Annotation as a service: helping build a global knowledge layer with annotation of the dark literature.
+=======================================================================================================
 
-**Codename: Aesir.**
+US Team Lead: C. Titus Brown
 
-(This is a proposed entry for the `Open Science Prize
-<https://www.openscienceprize.org/>`__. The content on this site
-emerged from discussions between Jon Udell, Maryann Martone, and Titus
-Brown.  We welcome any and all comments or suggestions, via disqus
-comments (at bottom), `Hypothesis annotations <http://hypothes.is>`__,
-or via pull request `(github here)
-<https://github.com/ctb/2016-aesir/>`__.)
-
-Abstract:
----------
-
-We propose to build server-side functionality to enable anyone to
-consume text and add annotations to it, using the `hypothes.is
-annotation system <http://hypothes.is>`__.  This would complement the
-client-side manual annotation functionality already offered by
-hypothes.is, and enable server-based analysis of closed documents by
-anyone with access to them.  The initial value of this is to expand
-the reach of the global annotation web into the "dark literature",
-while also enabling deeper annotation and meta-analysis of that
-literature.  Here, the "dark literature" includes closed-access
-papers, pre-publication and in-review papers, "informal" literature
-such as blog posts and tutorials, software manuals and documentation,
-and micro- and meso-scale data resources.
+non-US Team Lead: Hypothes.is, Inc.
 
 Introduction:
 -------------
@@ -47,13 +25,13 @@ Hypothes.is offers an optional overlay and enables permissionless
 annotation by 3rd parties unaffiliated with either the content
 consumer or the content provider.  Crucially, this bypasses much of
 the friction associated with working with publishers to provide an
-annotation overlay, although a large consortium of publishers *is*
+annotation overlay, although a consortium of publishers *is*
 working closely with hypothes.is.
 
-For more on hypothes.is, please see :doc:`introducing-hypothesis`.
+For more on hypothes.is, please see `Introducing Hypothes.is <https://2016-aesir.readthedocs.org/en/latest/introducing-hypothesis.html>`__.
 
-Statement of problem:
----------------------
+The problems and the proposed solution
+--------------------------------------
 
 There are two problems we are interested in solving.
 
@@ -65,15 +43,51 @@ annotation.
 
 We believe we can help solve these two bigger problems with one
 technical approach: we will give individuals an in-browser app letting
-them submit any paper to an analysis server that will then provide
-open annotations on the paper.  We will also build server-side
+them submit any paper to an analysis server that will openly annotate
+the paper.  We will also build server-side
 software to support *any* annotation engine.
 
 This will permit individuals to link closed papers of interest into
-the global annotatome, while also enabling new annotation *services*
-to be built quickly and easily.
+the global annotation web, while also enabling new annotation
+*services* to be built quickly and easily.
 
-We have chosen the nickname "Aesir" for this system.
+More generally, this can drive the creation of machine-based
+structured tags to enrich texts, which will create a skein of linked
+data that could be surfaced in various ways.  And, because annotations
+are RDF, the recording and exposure of data linkages becomes available
+for querying.  In essence, it would help create derived knowledge that
+could be queried in powerful ways.
+
+We have provisionally named this server-side system "Aesir."
+
+SciBot: a prototype
+-------------------
+
+Working with partners at the Neuroscience Information Framework (NIF),
+Hypothes.is has deployed an alpha service called SciBot. SciBot is a
+tool that scans scientific papers for text snippets called `RRIDs
+(Research Resource Identifiers
+<http://f1000research.com/articles/4-134/v1>`__), annotates them with
+metadata stored elsewhere, and enables human curators to validate or
+enhance the connection between an RRID that appears in the text of a
+paper and its associated metadata.  RRID are unique identifiers for
+certain types of resources used in biomedicine, e.g. antibodies, model
+organisms and software tools/databases. These identifiers are issued
+by authoritative community repositories like the Antibody Registry
+(http://antibodyregistry.org), and aggregated by NIF through its data
+aggregation platform, SciCrunch. When the SciBot plug in is activated,
+it highlights RRID's in the text and pulls the metadata about the
+particular resource from the SciCrunch resolving service into the
+Hypothes.is client, where it is presented as an annotation overlay on
+the text. Viewers can reply to the annotation, e.g., to note an error
+or supply additional information on a resource. In this way,
+Hypothes.is creates a hybrid machine-human interface that has general
+purpose utility.  Aesir would extend this to arbitrary annotation
+engines.
+
+Please see the associated video for a demo. The source code is
+publicly available under an open source license at
+https://github.com/judell/rrid.
 
 Three use cases that Aesir would enable
 ---------------------------------------
@@ -117,19 +131,21 @@ enable the generation of open content: here, the comments, extractions,
 and annotations on literature.  The proposed system could also consume,
 integrate, analyze, and compare *existing* annotations, enabling
 **metanalysis** of annotations.  And, since annotations in hypothes.is
-are explicitly licensed under CC0, there is no restriction on reuse
+are under CC0, there is no restriction on reuse
 or remixing.
 
 Moreover, the use of closed access literature to produce annotations
-is allowed by publishers (link?)  By making use of remote "cloud"
-services to analyze (but not retain) literature per a user's request,
-we believe we avoiding any infringement of license terms.  We do
-expect that the initial beneficiaries of this will be the
-closed-access publishers who may find more users of their closed
-archives, but even this serves the greater good by linking this closed
-literature into the global annotatome.  In the long term, we believe
-this will serve as a powerful demonstration of the uses and power of
-open literature.
+is arguably legal because it is non-infringing transformative fair use
+(although this has not been tested yet; see `link
+<http://www.baercrossey.com/1723/google-books-case-transforms-the-fair-use-standard>`__
+for argument).  By making use of remote "cloud" services to analyze
+(but not retain) literature and doing so at a user's request, we
+believe we avoiding any infringement of license terms.  We do expect
+that the initial beneficiaries of this will be the closed-access
+publishers who may find more users of their closed archives, but even
+this serves the greater good by linking this closed literature into
+the global annotatome.  In the long term, we believe this will serve
+as a powerful demonstration of the uses and power of open literature.
 
 Longer term, we believe there will be many groups interested in
 permissionless server-side automated annotation of text, and we hope
@@ -153,8 +169,6 @@ logic.  We would provide a full demo server implementation using a
 public open source code base (here, working with ContentMine would be
 a natural fit). We would also provide simple hooks to enable anyone
 to integrate whatever annotation engine they wanted.
-
-A prototype implementation will be available shortly.
 
 On top of these deliverables we envision a variety of services, depending
 on where we see opportunities:
@@ -210,15 +224,8 @@ bodies of papers, we will enable meta-analysis of annotation networks
 and be able to build connections between overlapping but disparate
 subfields of scientific literature.
 
-A list of use cases
--------------------
-
-(Expand on these.)
-
-Wormbase & Textpresso integration - Wormbase has integrated a large
-body of literature into its database, and we could help reverse the
-Textpresso system to annotate the source literature with links into
-the database.
+Additional use cases
+--------------------
 
 Duplication, version, and plagiarism analysis - it would be
 straightforward to identify cases where highly similar annotations
@@ -226,9 +233,9 @@ were placed on different document IDs, which could then be examined
 for document equivalence, different versions, or plagiarized text.
 
 Distributed commenting and aggregation of pre/post-publication peer
-review of literature.  Basically, a way to take comments from multiple
-locations and link them directly to the relevant text, pubmed records,
-etc.
+review of literature.  This would provide a way to take comments from
+multiple locations and link them directly to the relevant text, pubmed
+records, and database links.
 
 Back citation from future literature, including identification of
 retracted citations, comments, and blog posts on the work and derived
@@ -240,9 +247,14 @@ published work on papers automatically.
 What would we spend the money on?
 ---------------------------------
 
-* hackathons & barnraisings
-* developer
-* ??
+The prize money would be spent on developing an open source server and
+proof of concept, and applying it to our three primary use cases.  All
+software products would be under the BSD 3-clause license.
+Hypothes.is itself is `completely open source
+<https://github.com/betatim/openscienceprize/pull/85#issuecomment-190232950>`__.
+
+We envision paying a developer and running hackathons once we have an
+initial proof of concept.
 
 Architecture
 ------------
@@ -251,7 +263,7 @@ The basic architecture is::
 
   content -> engine + existing annotations -> new annotations
 
-The Web server arch would be::
+The Web server architecture would be::
 
   content -> server running engine + retrieving existing annots -> new annots
 
