@@ -111,7 +111,7 @@ Three use cases that Aesir would enable
    hypothes.is, where they can be viewed by Rebecca and others.
 
    This is a general pattern: many databases may want to layer annotations
-   on the literature, but talking to publishers directly can be
+   on the literature, but working with many publishers directly can be
    an insurmountable challenge.  Hypothes.is solves this problem, but
    as of yet there is no good way for databases to engage with Hypothes.is
    in high-throughput.
@@ -134,14 +134,17 @@ Three use cases that Aesir would enable
    paper, and wants to mark it up with external blog commentary and
    public reviews.  Unfortunately, the paper is a revision of a posted
    preprint and so its hypothes.is URL has changed and no annotations
-   are associated with it; James submits the paper to a service that
-   identifies it as a duplicate of a previously annotated paper and
-   transfers the annotations over to it where possible.  As a bonus,
-   James could annotate the paper with his review when he is done.
+   are associated with it; James submits the paper to an Aesir-based
+   service that identifies it as a duplicate of a previously annotated
+   paper and transfers the annotations over to it where possible.  As
+   a bonus, James could annotate the paper with his review when he is
+   done.
    
    Here, Hypothes.is could help tame the impending chaos of pre- and
-   post-publication open peer review, linking comments from multiple
-   locations to each paper.
+   post-publication open peer review, by interlinking comments from
+   multiple sources to each paper.  These comments could even be
+   summarized and overlaid by a meta-analysis service, providing additional
+   value to readers.
 
 In these three use cases, considerable computational work is being done
 by the remote server - none of this work can be done within the confines
