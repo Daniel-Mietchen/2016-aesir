@@ -1,9 +1,9 @@
 Annotation as a service: helping build a global knowledge layer with annotation of the dark literature.
 =======================================================================================================
 
-US Team Lead: C. Titus Brown
+US Team Lead: C. Titus Brown, UC Davis.
 
-non-US Team Lead: Hypothes.is, Inc.
+non-US Team Lead: Christof Dorner, Hypothes.is.
 
 Introduction:
 -------------
