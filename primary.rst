@@ -12,12 +12,12 @@ Introduction:
 allows annotations to be associated with Web text. Each annotation
 consists of a document ID, a document anchor, some free text, and
 tags; annotations can be either public or belong to private groups.
-The hypothes.is service currently offers an overlay display where
+The Hypothes.is service currently offers an overlay display where
 these annotations are placed on HTML or PDF views of documents;
 annotations can also be shared and searched globally. Annotations can
 be placed manually by means of a browser plugin, or the same code
 delivered via JavaScript embedding or a Web proxy.  Annotations are
-stored in the hypothes.is central database and can be retrieved on
+stored in the Hypothes.is central database and can be retrieved on
 demand for any specified URL, user, group, or tag. Annotations are
 searchable along these facets as well as with free text query. Annotations
 will soon be link-able to ORCIDs, as well, tying into a global system of
@@ -28,9 +28,9 @@ annotation by 3rd parties unaffiliated with either the content
 consumer or the content provider.  Crucially, this bypasses much of
 the friction associated with working with publishers to provide an
 annotation overlay, although a consortium of publishers *is*
-working closely with hypothes.is.
+working closely with Hypothes.is.
 
-For more on hypothes.is, please see `Introducing Hypothes.is <https://2016-aesir.readthedocs.org/en/latest/introducing-hypothesis.html>`__.
+For more on Hypothes.is, please see `Introducing Hypothes.is <https://2016-aesir.readthedocs.org/en/latest/introducing-hypothesis.html>`__.
 
 The problems and the proposed solution
 --------------------------------------
@@ -47,7 +47,7 @@ either by humans or automated algorithms, but these annotations are
 not easily shared, nor are they available for global analysis. Rather,
 each is locked in an individual silo.
 
-Second, the hypothes.is annotation system currently relies on manual
+Second, the Hypothes.is annotation system currently relies on manual
 annotation.
 
 We believe we can help solve these two bigger problems with one
@@ -108,7 +108,7 @@ Three use cases that Aesir would enable
    the C. elegans genome database.  She installs the Wormbase
    "annotate this" bookmark and clicks on it; this sends the paper
    to an Aesir server that annotates it and posts the annotations to
-   hypothes.is, where they can be viewed by Rebecca and others.
+   Hypothes.is, where they can be viewed by Rebecca and others.
 
    This is a general pattern: many databases may want to layer annotations
    on the literature, but working with many publishers directly can be
@@ -122,7 +122,7 @@ Three use cases that Aesir would enable
    this" bookmark, which sends the paper to an Aesir server which runs
    the ContentMine annotation engine on it and redirects Jason to the
    resulting data.  In line with ContentMine's collaboration with
-   hypothes.is, links to the data are also provided directly on the paper.
+   Hypothes.is, links to the data are also provided directly on the paper.
 
    By building a system that lets users submit interesting literature
    to the annotation system, we believe we can crack open the closed
@@ -133,7 +133,7 @@ Three use cases that Aesir would enable
 3. **Leveraging & driving open peer review.** Tina is reviewing a
    paper, and wants to mark it up with external blog commentary and
    public reviews.  Unfortunately, the paper is a revision of a posted
-   preprint and so its hypothes.is URL has changed and no annotations
+   preprint and so its Hypothes.is URL has changed and no annotations
    are associated with it; James submits the paper to an Aesir-based
    service that identifies it as a duplicate of a previously annotated
    paper and transfers the annotations over to it where possible.  As
@@ -148,7 +148,7 @@ Three use cases that Aesir would enable
 
 In these three use cases, considerable computational work is being done
 by the remote server - none of this work can be done within the confines
-of the current client-side hypothes.is approach, and all three use cases
+of the current client-side Hypothes.is approach, and all three use cases
 could be supported with a single technical solution.
 
 Deliverables
@@ -159,7 +159,7 @@ Python) for adding annotations to documents, together with JavaScript
 bookmarklets to enable submission of documents to such servers from
 within any modern Web browser.  The server code would contain an open
 source implementation of the parsing and annotation-marking logic used
-in hypothes.is, providing a framework that would readily enable
+in Hypothes.is, providing a framework that would readily enable
 developers to consume text and annotate it according to their own
 logic.  We would provide a full demo server implementation using a
 public open source code base (here, working with ContentMine would be
@@ -174,7 +174,7 @@ on where we see opportunities emerge:
   networks of annotations;
    
 * enabling human feedback on and editing of automated annotations
-  within hypothes.is itself, so that viewers can annotate annotations
+  within Hypothes.is itself, so that viewers can annotate annotations
   and identify misannotations;
   
 * a recommendation system based on annotation similarity and
@@ -192,7 +192,7 @@ on where we see opportunities emerge:
   and support for trust network overlays;
 
 * unifying scattered versions and representations by marrying
-  automatic analysis and human curation; for example, hypothes.is
+  automatic analysis and human curation; for example, Hypothes.is
   could be used to store "document signatures" that could be searched
   to connect papers with different URIs.
 
@@ -239,8 +239,8 @@ We are encouraging and supporting services, tools, and platforms that
 enable the generation of open content: here, the comments,
 extractions, and annotations on literature.  The proposed system could
 also consume, integrate, analyze, and compare *existing* annotations,
-enabling **metanalysis** of annotations.  And, since annotations in
-hypothes.is are under CC0, there is no restriction on reuse or
+enabling **meta-analysis** of annotations.  And, since annotations in
+Hypothes.is are under CC0, there is no restriction on reuse or
 remixing.
 
 Moreover, the use of closed access literature to produce annotations

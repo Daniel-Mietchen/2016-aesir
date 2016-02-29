@@ -44,7 +44,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'2016-easir'
+project = u'2016-aesir'
 copyright = u'2016, C. Titus Brown, Maryann Martone, and Maryann Martone'
 
 # The version info for the project you're documenting, acts as replacement for
