@@ -20,7 +20,7 @@ delivered via JavaScript embedding or a Web proxy.  Annotations are
 stored in the hypothes.is central database and can be retrieved on
 demand for any specified URL, user, group, or tag. Annotations are
 searchable along these facets as well as with free text query. Annotations
-will soon be linkable to ORCIDs, as well, tying into a global system of
+will soon be link-able to ORCIDs, as well, tying into a global system of
 authorship identifiers.
 
 Hypothes.is offers an optional overlay and enables permissionless
