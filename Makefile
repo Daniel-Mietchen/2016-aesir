@@ -18,6 +18,11 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
 all: html
 
+pdf: proposal.pdf
+
+proposal.pdf: primary.rst
+	pandoc -V colorlinks primary.rst -o proposal.pdf
+
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html       to make standalone HTML files"
