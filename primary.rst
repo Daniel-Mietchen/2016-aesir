@@ -19,7 +19,9 @@ be placed manually by means of a browser plugin, or the same code
 delivered via JavaScript embedding or a Web proxy.  Annotations are
 stored in the hypothes.is central database and can be retrieved on
 demand for any specified URL, user, group, or tag. Annotations are
-searchable along these facets as well as with free text query.
+searchable along these facets as well as with free text query. Annotations
+will soon be linkable to ORCIDs, as well, tying into a global system of
+authorship identifiers.
 
 Hypothes.is offers an optional overlay and enables permissionless
 annotation by 3rd parties unaffiliated with either the content
@@ -67,7 +69,7 @@ could be queried in powerful ways.
 
 We have provisionally named this server-side system "Aesir."
 
-SciBot: a prototype
+A prototype: SciBot
 -------------------
 
 Working with partners at the Neuroscience Information Framework (NIF),
@@ -80,17 +82,17 @@ enhance the connection between an RRID that appears in the text of a
 paper and its associated metadata.  RRID are unique identifiers for
 certain types of resources used in biomedicine, e.g. antibodies, model
 organisms and software tools/databases. These identifiers are issued
-by authoritative community repositories like the Antibody Registry
-(http://antibodyregistry.org), and aggregated by NIF through its data
-aggregation platform, SciCrunch. When the SciBot plug in is activated,
-it highlights RRID's in the text and pulls the metadata about the
-particular resource from the SciCrunch resolving service into the
-Hypothes.is client, where it is presented as an annotation overlay on
-the text. Viewers can reply to the annotation, e.g., to note an error
-or supply additional information on a resource. In this way,
-Hypothes.is creates a hybrid machine-human interface that has general
-purpose utility.  Aesir would extend this to arbitrary annotation
-engines.
+by authoritative community repositories like the `Antibody Registry
+<http://antibodyregistryo.org>`__, and aggregated by NIF through its
+data aggregation platform, SciCrunch. When the SciBot plug in is
+activated, it highlights RRID's in the text and pulls the metadata
+about the particular resource from the SciCrunch resolving service
+into the Hypothes.is client, where it is presented as an annotation
+overlay on the text. Viewers can reply to the annotation, e.g., to
+note an error or supply additional information on a resource. In this
+way, Hypothes.is creates a hybrid machine-human interface that has
+general purpose utility.  Aesir would extend this to arbitrary
+annotation engines.
 
 Please see the associated video for a demo. The source code is
 publicly available under an open source license at
@@ -124,6 +126,9 @@ Three use cases that Aesir would enable
    identifies it as a duplicate of a previously annotated paper and
    transfers the annotations over to it where possible.  As a bonus,
    James could annotate the paper with his review when he is done.
+   More generally, Hypothes.is could help tame the impending chaos of
+   pre- and post-publication open peer review, linking comments
+   from multiple locations to each paper.
 
 In these three use cases, considerable computational work is being done
 by the remote server - none of this work can be done within the confines
@@ -134,12 +139,12 @@ Why does this fit the Open Science Prize?
 -----------------------------------------
 
 We are encouraging and supporting services, tools, and platforms that
-enable the generation of open content: here, the comments, extractions,
-and annotations on literature.  The proposed system could also consume,
-integrate, analyze, and compare *existing* annotations, enabling
-**metanalysis** of annotations.  And, since annotations in hypothes.is
-are under CC0, there is no restriction on reuse
-or remixing.
+enable the generation of open content: here, the comments,
+extractions, and annotations on literature.  The proposed system could
+also consume, integrate, analyze, and compare *existing* annotations,
+enabling **metanalysis** of annotations.  And, since annotations in
+hypothes.is are under CC0, there is no restriction on reuse or
+remixing.
 
 Moreover, the use of closed access literature to produce annotations
 is arguably legal because it is non-infringing transformative fair use
@@ -178,7 +183,7 @@ a natural fit). We would also provide simple hooks to enable anyone
 to integrate whatever annotation engine they wanted.
 
 On top of these deliverables we envision a variety of services, depending
-on where we see opportunities:
+on where we see opportunities emerge:
 
 * large-scale annotation search and comparison, so that documents can
   be grouped and analyzed based on their annotations and larger
@@ -246,22 +251,19 @@ reviewing with an automated system to identify relevant literature.
 Additional use cases
 --------------------
 
-Duplication, version, and plagiarism analysis - it would be
-straightforward to identify cases where highly similar annotations
-were placed on different document IDs, which could then be examined
-for document equivalence, different versions, or plagiarized text.
+Duplication, version, and plagiarism analysis could be performed
+automatically. It would be straightforward to identify cases where
+highly similar annotations were placed on different document IDs;
+the documents could then be examined for document equivalence, different
+versions, or plagiarized text.
 
-Distributed commenting and aggregation of pre/post-publication peer
-review of literature.  This would provide a way to take comments from
-multiple locations and link them directly to the relevant text, pubmed
-records, and database links.
+Annotations could enable back citation from future literature,
+including identification of retracted citations, comments, and blog
+posts on the work and derived works.
 
-Back citation from future literature, including identification of
-retracted citations, comments, and blog posts on the work and derived
-works.
-
-Place forward links to software, computational workflows, & replications of
-published work on papers automatically.
+Hypothes.is could be used to place forward links to software,
+computational workflows, & replications of published work on papers
+automatically.
 
 What would we spend the money on?
 ---------------------------------
@@ -272,13 +274,14 @@ software products would be under the BSD 3-clause license.
 Hypothes.is itself is `completely open source
 <https://github.com/betatim/openscienceprize/pull/85#issuecomment-190232950>`__.
 
-We envision paying a developer and running hackathons once we have an
-initial proof of concept.
+We plan to support an existing Hypothes.is developer to implement the
+prototype, and will then run hackathons once we have an initial proof
+of concept.
 
 Architecture
 ------------
 
-The primary client-side mechanism would be a bookmarklet or in-browser
+Our primary client-side mechanism will be a bookmarklet or in-browser
 app that would submit HTML or PDF text to a server for analysis.  On
 the server side, we would provide Python libraries for text
 consumption and normalization, anchor extraction, annotation
@@ -291,7 +294,3 @@ it into this ecosystem.
 
    Figure 1: The basic architecture we propose; the annotation engines
    would make use of but be largely independent of the Aesir code.
-
-Leftover text
--------------
-
