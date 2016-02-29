@@ -41,11 +41,11 @@ provide a dynamic unifying layer across biomedicine is significant.
 There are two problems we are interested in solving.
 
 First, large portions of the biomedical scholarly literature are
-completely inaccessible to automated, large scale analysis.  Large
-portions of the biomedical literature may have been annotated, either by
-humans or automated algorithms, but these annotations are not easily
-shared, nor are they available for global analysis. Rather, each is
-locked in an individual silo.
+completely inaccessible to automated, large scale analysis. Moreover,
+large portions of the biomedical literature may have been annotated,
+either by humans or automated algorithms, but these annotations are
+not easily shared, nor are they available for global analysis. Rather,
+each is locked in an individual silo.
 
 Second, the hypothes.is annotation system currently relies on manual
 annotation.
@@ -110,6 +110,12 @@ Three use cases that Aesir would enable
    to an Aesir server that annotates it and posts the annotations to
    hypothes.is, where they can be viewed by Rebecca and others.
 
+   This is a general pattern: many databases may want to layer annotations
+   on the literature, but talking to publishers directly can be
+   an insurmountable challenge.  Hypothes.is solves this problem, but
+   as of yet there is no good way for databases to engage with Hypothes.is
+   in high-throughput.
+
 2. **Extract data from closed literature.** Jason would like to use
    ContentMine to extract data from a closed-access paper he is
    reading, for his own reuse.  He clicks the ContentMine "extract
@@ -117,6 +123,12 @@ Three use cases that Aesir would enable
    the ContentMine annotation engine on it and redirects Jason to the
    resulting data.  In line with ContentMine's collaboration with
    hypothes.is, links to the data are also provided directly on the paper.
+
+   By building a system that lets users submit interesting literature
+   to the annotation system, we believe we can crack open the closed
+   literature to an significant extent.  We also expect a higher density of
+   annotations around more "active" or still-relevant papers, which will
+   provide interesting opportunities for meta-analysis.
 
 3. **Leveraging & driving open peer review.** Tina is reviewing a
    paper, and wants to mark it up with external blog commentary and
@@ -126,46 +138,15 @@ Three use cases that Aesir would enable
    identifies it as a duplicate of a previously annotated paper and
    transfers the annotations over to it where possible.  As a bonus,
    James could annotate the paper with his review when he is done.
-   More generally, Hypothes.is could help tame the impending chaos of
-   pre- and post-publication open peer review, linking comments
-   from multiple locations to each paper.
+   
+   Here, Hypothes.is could help tame the impending chaos of pre- and
+   post-publication open peer review, linking comments from multiple
+   locations to each paper.
 
 In these three use cases, considerable computational work is being done
 by the remote server - none of this work can be done within the confines
 of the current client-side hypothes.is approach, and all three use cases
 could be supported with a single technical solution.
-
-Why does this fit the Open Science Prize?
------------------------------------------
-
-We are encouraging and supporting services, tools, and platforms that
-enable the generation of open content: here, the comments,
-extractions, and annotations on literature.  The proposed system could
-also consume, integrate, analyze, and compare *existing* annotations,
-enabling **metanalysis** of annotations.  And, since annotations in
-hypothes.is are under CC0, there is no restriction on reuse or
-remixing.
-
-Moreover, the use of closed access literature to produce annotations
-is arguably legal because it is non-infringing transformative fair use
-(although this has not been tested yet; see `link
-<http://www.baercrossey.com/1723/google-books-case-transforms-the-fair-use-standard>`__
-for argument).  By making use of remote "cloud" services to analyze
-(but not retain) literature and doing so at a user's request, we
-believe we avoiding any infringement of license terms.  We do expect
-that the initial beneficiaries of this will be the closed-access
-publishers who may find more users of their closed archives, but even
-this serves the greater good by linking this closed literature into
-the global annotatome.  In the long term, we believe this will serve
-as a powerful demonstration of the uses and power of open literature.
-
-Longer term, we believe there will be many groups interested in
-permissionless server-side automated annotation of text, and we hope
-that by providing an automated system matching the existing client
-annotation interface, we can more readily enable the development of an
-ecosystem of approaches to open annotation.  Essentially, we hope to
-expand the range of creative people who can try out new annotation
-approaches.
 
 Deliverables
 ------------
@@ -247,6 +228,38 @@ based on a compute-intensive analysis; or, publishers and institutions
 could provide a "first look" of annotation for their own document
 collections; or, reviewers could privately annotate papers they are
 reviewing with an automated system to identify relevant literature.
+
+Why does this fit the Open Science Prize?
+-----------------------------------------
+
+We are encouraging and supporting services, tools, and platforms that
+enable the generation of open content: here, the comments,
+extractions, and annotations on literature.  The proposed system could
+also consume, integrate, analyze, and compare *existing* annotations,
+enabling **metanalysis** of annotations.  And, since annotations in
+hypothes.is are under CC0, there is no restriction on reuse or
+remixing.
+
+Moreover, the use of closed access literature to produce annotations
+is arguably legal because it is non-infringing transformative fair use
+(although this has not been tested yet; see `link
+<http://www.baercrossey.com/1723/google-books-case-transforms-the-fair-use-standard>`__
+for argument).  By making use of remote "cloud" services to analyze
+(but not retain) literature and doing so at a user's request, we
+believe we avoiding any infringement of license terms.  We do expect
+that the initial beneficiaries of this will be the closed-access
+publishers who may find more users of their closed archives, but even
+this serves the greater good by linking this closed literature into
+the global annotatome.  In the long term, we believe this will serve
+as a powerful demonstration of the uses and power of open literature.
+
+Longer term, we believe there will be many groups interested in
+permissionless server-side automated annotation of text, and we hope
+that by providing an automated system matching the existing client
+annotation interface, we can more readily enable the development of an
+ecosystem of approaches to open annotation.  Essentially, we hope to
+expand the range of creative people who can try out new annotation
+approaches.
 
 Additional use cases
 --------------------
